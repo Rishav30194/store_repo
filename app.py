@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'rishav'
 api = Api(app)
 
-@application.before_first_request
+@app.before_first_request
 def create_table():
     db.create_all()
 
